@@ -1,0 +1,8 @@
+{
+    "start_date":"",
+    "end_date":"",
+    "account_id":"",
+    "access_token":"",
+    "include_deleted": false,
+    "insights_buffer_days": 28
+}

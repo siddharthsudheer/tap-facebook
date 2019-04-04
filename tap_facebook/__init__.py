@@ -640,11 +640,10 @@ def main_impl():
 
     if args.discover:
         do_discover()
-    elif args.properties:
-        catalog = Catalog.from_dict(args.properties)
-        do_sync(account, catalog, args.state)
+    elif args.catalog:
+        do_sync(account, args.catalog, args.state)
     else:
-        LOGGER.info("No properties were selected")
+        LOGGER.info("No streams were selected")
 
 def main():
 
