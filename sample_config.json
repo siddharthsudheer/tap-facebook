@@ -4,5 +4,6 @@
     "account_id":"",
     "access_token":"",
     "include_deleted": false,
-    "insights_buffer_days": 28
+    "insights_buffer_days": 28,
+    "autoselect_all_for_discover": false
 }

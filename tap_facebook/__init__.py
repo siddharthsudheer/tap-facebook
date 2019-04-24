@@ -573,6 +573,8 @@ def load_schema(stream):
     field_class = stream.field_class
     schema = utils.load_json(path)
     for k in schema['properties']:
+        if CONFIG.get('autoselect_all_for_discover', False):
+            schema['properties'][k]['selected'] = True
         if k in set(stream.key_properties) or k == UPDATED_TIME_KEY:
             schema['properties'][k]['inclusion'] = 'automatic'
         else:
